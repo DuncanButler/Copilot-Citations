@@ -1,0 +1,548 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "",
+    "targetDisplayName": ".NET 9.0"
+  },
+  "analysisStartTime": "2025-05-24T22:14:29.7138423Z",
+  "analysisEndTime": "2025-05-24T22:14:35.7391464Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 3,
+      "issues": 4,
+      "incidents": 18,
+      "effort": 18
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 3,
+        "Optional": 1,
+        "Potential": 14,
+        "Information": 0
+      },
+      "category": {
+        "Project": 3,
+        "Api": 13,
+        "NuGet": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "CitationExample\\CitationExample.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "ruleInstances": [
+        {
+          "incidentId": "88b6f9de-a5ee-4b73-8cdb-a1eca97a2f72",
+          "ruleId": "Project.0002",
+          "projectPath": "CitationExample\\CitationExample.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current: net6.0\nNew: net9.0",
+              "protected": "Current: net6.0\nNew: net9.0"
+            },
+            "kind": "File",
+            "path": "CitationExample\\CitationExample.csproj",
+            "snippet": "Current: net6.0\nNew: net9.0",
+            "protectedSnippet": "Current: net6.0\nNew: net9.0"
+          }
+        }
+      ]
+    },
+    {
+      "path": "CitationMSBuild\\CitationMSBuild.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 14,
+      "ruleInstances": [
+        {
+          "incidentId": "6bbf20db-d11d-4106-b8a3-d364b73df5dd",
+          "ruleId": "Project.0002",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current: netstandard2.0\nNew: net9.0",
+              "protected": "Current: netstandard2.0\nNew: net9.0"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\CitationMSBuild.csproj",
+            "snippet": "Current: netstandard2.0\nNew: net9.0",
+            "protectedSnippet": "Current: netstandard2.0\nNew: net9.0"
+          }
+        },
+        {
+          "incidentId": "fb05f248-11e7-435b-88c8-66ef9f6eeff0",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Utilities.Core, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+              "protected": "M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(Microsoft.Build.Framework.MessageImportance,System.String,System.Object[])"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+            "protectedSnippet": "M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(Microsoft.Build.Framework.MessageImportance,System.String,System.Object[])",
+            "label": "M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(Microsoft.Build.Framework.MessageImportance,System.String,System.Object[])",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.utilities.tasklogginghelper.logmessage",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "25026edd-62e0-4f73-be6f-bdc51bd3e26c",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Utilities.Core, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Task",
+              "protected": "T:Microsoft.Build.Utilities.Task"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Task",
+            "protectedSnippet": "T:Microsoft.Build.Utilities.Task",
+            "label": "T:Microsoft.Build.Utilities.Task",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.utilities.task",
+                "isCustom": false
+              }
+            ],
+            "line": 12,
+            "column": 65
+          }
+        },
+        {
+          "incidentId": "79ec2b9c-4463-4b26-b749-2108f4be2b48",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Utilities.Core, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Task",
+              "protected": "M:Microsoft.Build.Utilities.Task.#ctor"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Task",
+            "protectedSnippet": "M:Microsoft.Build.Utilities.Task.#ctor",
+            "label": "M:Microsoft.Build.Utilities.Task.#ctor",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.utilities.task.task",
+                "isCustom": false
+              }
+            ],
+            "line": 12,
+            "column": 65
+          }
+        },
+        {
+          "incidentId": "c55439de-a496-4e11-8ac2-d660e85569e5",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Framework, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Required",
+              "protected": "T:Microsoft.Build.Framework.RequiredAttribute"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Required",
+            "protectedSnippet": "T:Microsoft.Build.Framework.RequiredAttribute",
+            "label": "T:Microsoft.Build.Framework.RequiredAttribute",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.framework.requiredattribute",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "cfd3a463-0f70-401c-a507-37255e230339",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Utilities.Core, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Log.LogError($\u0022Failed to update citations: {ex.Message}\u0022);",
+              "protected": "T:Microsoft.Build.Utilities.TaskLoggingHelper"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Log.LogError($\u0022Failed to update citations: {ex.Message}\u0022);",
+            "protectedSnippet": "T:Microsoft.Build.Utilities.TaskLoggingHelper",
+            "label": "T:Microsoft.Build.Utilities.TaskLoggingHelper",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.utilities.tasklogginghelper",
+                "isCustom": false
+              }
+            ],
+            "line": 43,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "d8ddb500-a961-41b8-bbf8-541d30f347bc",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Framework, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Required",
+              "protected": "M:Microsoft.Build.Framework.RequiredAttribute.#ctor"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Required",
+            "protectedSnippet": "M:Microsoft.Build.Framework.RequiredAttribute.#ctor",
+            "label": "M:Microsoft.Build.Framework.RequiredAttribute.#ctor",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.framework.requiredattribute.requiredattribute",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "6ba75afb-78f0-4b2f-b79c-e3c67bd731ac",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Framework, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+              "protected": "F:Microsoft.Build.Framework.MessageImportance.Normal"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+            "protectedSnippet": "F:Microsoft.Build.Framework.MessageImportance.Normal",
+            "label": "F:Microsoft.Build.Framework.MessageImportance.Normal",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.framework.messageimportance.normal",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "8d91442b-7b28-4570-bf67-cddd8d674ff7",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Utilities.Core, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+              "protected": "P:Microsoft.Build.Utilities.Task.Log"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+            "protectedSnippet": "P:Microsoft.Build.Utilities.Task.Log",
+            "label": "P:Microsoft.Build.Utilities.Task.Log",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.utilities.task.log",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "571ccff2-2778-4b1b-b801-98e15123f9ec",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Utilities.Core, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Log.LogError($\u0022Failed to update citations: {ex.Message}\u0022);",
+              "protected": "P:Microsoft.Build.Utilities.Task.Log"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Log.LogError($\u0022Failed to update citations: {ex.Message}\u0022);",
+            "protectedSnippet": "P:Microsoft.Build.Utilities.Task.Log",
+            "label": "P:Microsoft.Build.Utilities.Task.Log",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.utilities.task.log",
+                "isCustom": false
+              }
+            ],
+            "line": 43,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "b01b9d61-355d-4900-b327-b6cd7396e53d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Utilities.Core, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+              "protected": "T:Microsoft.Build.Utilities.TaskLoggingHelper"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+            "protectedSnippet": "T:Microsoft.Build.Utilities.TaskLoggingHelper",
+            "label": "T:Microsoft.Build.Utilities.TaskLoggingHelper",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.utilities.tasklogginghelper",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "54b11624-4a0d-45db-bf52-bc2b3795aabb",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Framework, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+              "protected": "T:Microsoft.Build.Framework.MessageImportance"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+            "protectedSnippet": "T:Microsoft.Build.Framework.MessageImportance",
+            "label": "T:Microsoft.Build.Framework.MessageImportance",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.framework.messageimportance",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "10c620e9-0fca-4b82-8f9f-beff8029e857",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Framework, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+              "protected": "T:Microsoft.Build.Framework.MessageImportance"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Log.LogMessage(MessageImportance.Normal, $\u0022Citations document updated at: {result}\u0022);",
+            "protectedSnippet": "T:Microsoft.Build.Framework.MessageImportance",
+            "label": "T:Microsoft.Build.Framework.MessageImportance",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.framework.messageimportance",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "599f9689-e8eb-49d5-a9b0-e12d98ad0a5d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.Build.Utilities.Core, 17.10.4.",
+          "projectPath": "CitationMSBuild\\CitationMSBuild.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Log.LogError($\u0022Failed to update citations: {ex.Message}\u0022);",
+              "protected": "M:Microsoft.Build.Utilities.TaskLoggingHelper.LogError(System.String,System.Object[])"
+            },
+            "kind": "File",
+            "path": "CitationMSBuild\\UpdateCitationsTask.cs",
+            "snippet": "Log.LogError($\u0022Failed to update citations: {ex.Message}\u0022);",
+            "protectedSnippet": "M:Microsoft.Build.Utilities.TaskLoggingHelper.LogError(System.String,System.Object[])",
+            "label": "M:Microsoft.Build.Utilities.TaskLoggingHelper.LogError(System.String,System.Object[])",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.build.utilities.tasklogginghelper.logerror",
+                "isCustom": false
+              }
+            ],
+            "line": 43,
+            "column": 16
+          }
+        }
+      ]
+    },
+    {
+      "path": "CitationTracker\\CitationTracker.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 3,
+      "ruleInstances": [
+        {
+          "incidentId": "7382c054-8034-4b6a-8089-c857b0452779",
+          "ruleId": "NuGet.0002",
+          "projectPath": "CitationTracker\\CitationTracker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Text.Json, 6.0.0\n\nRecommendation:\n\nSystem.Text.Json 9.0.5",
+              "protected": "System.Text.Json, 6.0.0\n\nRecommendation:\n\nSystem.Text.Json 9.0.5"
+            },
+            "kind": "File",
+            "path": "CitationTracker\\CitationTracker.csproj",
+            "snippet": "System.Text.Json, 6.0.0\n\nRecommendation:\n\nSystem.Text.Json 9.0.5",
+            "protectedSnippet": "System.Text.Json, 6.0.0\n\nRecommendation:\n\nSystem.Text.Json 9.0.5",
+            "label": "System.Text.Json 6.0.0"
+          }
+        },
+        {
+          "incidentId": "c06f2b9f-1e5b-4a10-a7c6-09c5f70ae753",
+          "ruleId": "NuGet.0004",
+          "projectPath": "CitationTracker\\CitationTracker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Text.Json, 6.0.0",
+              "protected": "System.Text.Json, 6.0.0"
+            },
+            "kind": "File",
+            "path": "CitationTracker\\CitationTracker.csproj",
+            "snippet": "System.Text.Json, 6.0.0",
+            "protectedSnippet": "System.Text.Json, 6.0.0",
+            "label": "System.Text.Json 6.0.0"
+          }
+        },
+        {
+          "incidentId": "1e119977-b28a-4a91-8ad6-a1753708affc",
+          "ruleId": "Project.0002",
+          "projectPath": "CitationTracker\\CitationTracker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current: netstandard2.0\nNew: net9.0",
+              "protected": "Current: netstandard2.0\nNew: net9.0"
+            },
+            "kind": "File",
+            "path": "CitationTracker\\CitationTracker.csproj",
+            "snippet": "Current: netstandard2.0\nNew: net9.0",
+            "protectedSnippet": "Current: netstandard2.0\nNew: net9.0"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "Project.0002": {
+      "id": "Project.0002",
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in moderrn .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "description": "Some API that lived in older versions of .NET frameworks were moved to standalone NuGet packages that could be added to projects explicitly.",
+      "label": "API available in NuGet package",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0004": {
+      "id": "NuGet.0004",
+      "description": "NuGet package contains security vulnerabilities.\n\nPackage needs to be upgraded to a newer version that addresses known security vulnerabilities.",
+      "label": "NuGet package contains security vulnerability",
+      "severity": "Optional",
+      "effort": 1
+    }
+  }
+}
