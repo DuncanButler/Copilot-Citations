@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CitationTracker</id>
+    <version>1.0.0</version>
+    <title>Citation Tracker for AI-Generated Content</title>
+    <authors>Citation Tracker Team</authors>
+    <owners>Citation Tracker Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/citation-tracker/citation-tracker</projectUrl>
+    <description>A library for tracking and managing citations in AI-generated code, particularly useful when working with GitHub Copilot.</description>
+    <summary>Track and properly attribute sources in AI-generated code</summary>
+    <releaseNotes>Initial release with core citation tracking functionality</releaseNotes>
+    <copyright>Copyright 2025</copyright>
+    <tags>AI GitHub-Copilot Citation Attribution</tags>
+    <repository type="git" url="https://github.com/citation-tracker/citation-tracker.git" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Text.Json" version="6.0.0" />
+      </group>
+      <group targetFramework="net6.0">
+        <dependency id="System.Text.Json" version="6.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Core library -->
+    <file src="bin\Release\netstandard2.0\CitationTracker.dll" target="lib\netstandard2.0\CitationTracker.dll" />
+    <file src="bin\Release\netstandard2.0\CitationTracker.xml" target="lib\netstandard2.0\CitationTracker.xml" />
+    
+    <!-- .NET 6.0 support -->
+    <file src="bin\Release\net6.0\CitationTracker.dll" target="lib\net6.0\CitationTracker.dll" />
+    <file src="bin\Release\net6.0\CitationTracker.xml" target="lib\net6.0\CitationTracker.xml" />
+    
+    <!-- MSBuild integration -->
+    <file src="build\CitationTracker.targets" target="build\CitationTracker.targets" />
+    <file src="build\CitationMSBuild.dll" target="tools\CitationMSBuild.dll" />
+    
+    <!-- Content files -->
+    <file src="content\citation-template.md" target="content\citation-template.md" />
+    <file src="content\citation-config.json" target="content\citation-config.json" />
+  </files>
+</package>

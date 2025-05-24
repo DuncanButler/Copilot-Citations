@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "name": "AdvertisingAPI",
+    "created_at": "2025-05-21T01:25:41.639212"
+  },
+  "sources": {
+    "amazon-advertising-api": {
+      "name": "Amazon Advertising API",
+      "url": "https://advertising.amazon.com/API/docs/en-us/",
+      "author": "Amazon.com, Inc.",
+      "license_type": "Amazon Advertising API License Agreement",
+      "description": "Official Amazon Advertising API documentation used as reference for implementing the client",
+      "added_at": "2025-05-21T01:25:41.639236"
+    },
+    "requests-advanced-pattern": {
+      "name": "Python Requests Library Advanced Patterns",
+      "url": "https://requests.readthedocs.io/en/latest/user/advanced/",
+      "author": "Kenneth Reitz",
+      "license_type": "Apache 2.0",
+      "description": "Advanced usage patterns for the Python Requests library",
+      "added_at": "2025-05-21T01:25:41.640228"
+    },
+    "stackoverflow-token-refresh": {
+      "name": "Stack Overflow: OAuth2 Token Refresh Strategy",
+      "url": "https://stackoverflow.com/questions/27771324/",
+      "author": "User: JohnSmith123",
+      "license_type": "CC BY-SA 4.0",
+      "description": "Solution for handling token refresh with a buffer time",
+      "added_at": "2025-05-21T01:25:41.640477"
+    }
+  },
+  "file_citations": {
+    "ad_api_client.py": [
+      {
+        "source_ids": [
+          "amazon-advertising-api"
+        ],
+        "cited_at": "2025-05-21T01:25:41.640741",
+        "line_start": 1,
+        "line_end": 310,
+        "comment": "Overall structure based on Amazon Advertising API documentation"
+      },
+      {
+        "source_ids": [
+          "requests-advanced-pattern"
+        ],
+        "cited_at": "2025-05-21T01:25:41.641172",
+        "line_start": 150,
+        "line_end": 200,
+        "comment": "Advanced request handling pattern adapted from Python Requests documentation"
+      },
+      {
+        "source_ids": [
+          "stackoverflow-token-refresh"
+        ],
+        "cited_at": "2025-05-21T01:25:41.641586",
+        "line_start": 45,
+        "line_end": 80,
+        "comment": "Token refresh strategy with 5-minute buffer inspired by Stack Overflow answer"
+      }
+    ]
+  }
+}
