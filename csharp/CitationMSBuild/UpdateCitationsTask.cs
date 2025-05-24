@@ -1,5 +1,9 @@
-using CitationTracking;
+using System;
+using System.IO;
 using Microsoft.Build.Framework;
+
+// Add an alias for the local CitationTracker
+using LocalCitationTracker = CitationTracking.CitationTracker;
 
 namespace CitationMSBuild
 {
@@ -27,9 +31,7 @@ namespace CitationMSBuild
         {
             try
             {
-                Log.LogMessage(MessageImportance.Normal, "Updating citations document...");
-                
-                var tracker = new CitationTracker(ProjectDirectory);
+                var tracker = new LocalCitationTracker(ProjectDirectory);
                 string outputPath = OutputPath ?? Path.Combine(ProjectDirectory, "CITATIONS.md");
                 
                 string result = tracker.ExportCitationsMarkdown(outputPath);
