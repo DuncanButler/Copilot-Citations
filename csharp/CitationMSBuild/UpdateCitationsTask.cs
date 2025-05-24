@@ -48,18 +48,3 @@ namespace CitationMSBuild
         }
     }
 }
-
-/*
- * Example .targets file content:
- * 
- * <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
- *   <UsingTask TaskName="CitationMSBuild.UpdateCitationsTask" 
- *             AssemblyFile="$(MSBuildThisFileDirectory)..\tools\CitationMSBuild.dll" />
- *             
- *   <Target Name="UpdateCitations" AfterTargets="Build" Condition="'$(UpdateCitations)' != 'false'">
- *     <UpdateCitationsTask 
- *       ProjectDirectory="$(MSBuildProjectDirectory)"
- *       OutputPath="$(MSBuildProjectDirectory)\CITATIONS.md" />
- *   </Target>
- * </Project>
- */

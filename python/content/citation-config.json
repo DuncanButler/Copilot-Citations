@@ -1,0 +1,8 @@
+{
+  "project_info": {
+    "name": "{{projectName}}",
+    "created_at": "{{createdAt}}"
+  },
+  "sources": {},
+  "file_citations": {}
+}

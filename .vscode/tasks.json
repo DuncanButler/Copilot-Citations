@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Citation Tracker Project",
+			"type": "shell",
+			"command": "pwsh",
+			"args": [
+				"-Command",
+				"Write-Host \"Building Copilot-Citations project...\" -ForegroundColor Cyan; Write-Host \"Building Python implementation...\" -ForegroundColor Yellow; cd python; pip install -e .; Write-Host \"Building C# implementation...\" -ForegroundColor Yellow; cd ../csharp; dotnet build CitationTracker.sln; Write-Host \"Build complete!\" -ForegroundColor Green"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"isBackground": false
+		}
+	]
+}

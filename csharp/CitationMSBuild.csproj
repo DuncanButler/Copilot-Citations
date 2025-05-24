@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="CitationMSBuild\UpdateCitationsTask.cs" />
     <None Include="build\CitationMSBuild.targets" Pack="true" PackagePath="build" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-# AI-Powered Citation Tracking for GitHub Copilot
+# Copilot-Citations: AI-Powered Citation Tracking
 
 This project provides tools and libraries for tracking and managing citations when using AI-assisted coding tools like GitHub Copilot. Proper citation tracking ensures that you give appropriate credit to sources when generating code or documents.
 
@@ -6,7 +6,9 @@ This project provides tools and libraries for tracking and managing citations wh
 
 - **Python Implementation**: [`/python`](./python/) - Citation tracking for Python projects
 - **C# Implementation**: [`/csharp`](./csharp/) - Citation tracking for C# projects
+- **Shared Resources**: [`/shared`](./shared/) - Example files and common resources
 - **Tools**: [`/tools`](./tools/) - Git hooks and utility scripts
+- **Documentation**: [`AI_CITATION_GUIDE.md`](./AI_CITATION_GUIDE.md) - Comprehensive citation guide
 
 ## Why Track Citations in AI-Generated Content?
 
@@ -26,125 +28,121 @@ Properly tracking these sources is important for:
 - **Enabling verification** of implementation details
 - **Building trust** in your development process
 
+## Quick Start
 
-## Implementation for C# Projects
+### For Python Projects
 
-If you're working with C# projects, you can use our dedicated C# citation tracking implementation.
-
-### 1. Install via NuGet Package
+1. **Install the Citation Tracker**
 
 ```bash
+# From the repository root
+cd python
+pip install -e .
+```
+
+2. **Using the Citation Tracker**
+
+```python
+from citation_tracker import CitationTracker
+
+# Initialize tracker
+tracker = CitationTracker()
+
+# Add a source
+tracker.add_source(
+    source_id="example-source",
+    name="Example Library Documentation",
+    url="https://example.com/docs",
+    author="Example Author",
+    license_type="MIT",
+    description="Pattern for handling example functionality"
+)
+
+# Cite in file
+tracker.cite_in_file(
+    file_path="my_file.py",
+    source_ids=["example-source"],
+    line_start=10,
+    line_end=20,
+    comment="Implementation based on example library documentation"
+)
+
+# Generate citations file
+tracker.export_citations_markdown()
+```
+
+For more detailed Python usage, see the [Python Implementation README](./python/README.md).
+
+### For C# Projects
+
+1. **Install the Citation Tracker**
+
+```bash
+# Using NuGet Package Manager Console
 Install-Package CitationTracker
 ```
 
-Or add it via the NuGet Package Manager in Visual Studio.
-
-### 2. Initialize the Tracker in Your Project
+2. **Using the Citation Tracker**
 
 ```csharp
 using CitationTracking;
 
-// Initialize with your project path
+// Initialize tracker
 var tracker = new CitationTracker();
 ```
 
-### 3. Workflow: Using Copilot with Citations in C#
-
-#### Step 1: Ask Copilot a Question
-
-When asking Copilot to generate C# code, be specific about what you're looking for:
-
-```
-@Copilot: Help me implement a method to handle JWT token validation
-```
-
-#### Step 2: Review and Accept Generated Code
-
-Review the code Copilot generates, make necessary adjustments, and then accept it.
-
-#### Step 3: Add Citation Information
-
-Immediately after accepting code from Copilot, add citation information:
-
-```csharp
-// Add the source
+# Add a source
 tracker.AddSource(
-    sourceId: "ms-identity-web",
-    name: "Microsoft Identity Web Authentication Library",
-    url: "https://docs.microsoft.com/en-us/azure/active-directory/develop/",
-    author: "Microsoft Identity Team",
+    sourceId: "example-source",
+    name: "Example Library Documentation",
+    url: "https://example.com/docs",
+    author: "Example Author",
     licenseType: "MIT",
-    description: "JWT token validation implementation pattern"
+    description: "Pattern for handling example functionality"
 );
 
-// Cite the source in your file
+# Cite in file
 tracker.CiteInFile(
-    filePath: "Services/AuthService.cs",
-    sourceId: "ms-identity-web",
-    lineStart: 45,  // Starting line of the relevant code
-    lineEnd: 60,    // Ending line of the relevant code
-    comment: "Token validation logic adapted from Microsoft Identity documentation"
+    filePath: "MyFile.cs",
+    sourceId: "example-source",
+    lineStart: 10,
+    lineEnd: 20,
+    comment: "Implementation based on example library documentation"
 );
-```
 
-#### Step 4: Add Attribution Headers
-
-For files with significant external contributions:
-
-```csharp
-// Generate an attribution header
-string header = tracker.InsertAttributionHeader("Services/AuthService.cs");
-
-// Manually insert at the top of the file
-// Or use the Visual Studio extension to do this automatically
-```
-
-#### Step 5: Generate Citations Document
-
-Before sharing or publishing your code:
-
-```csharp
-// Generate a markdown file with all citations
+# Generate citations file
 tracker.ExportCitationsMarkdown();
 ```
 
-### 4. Visual Studio Integration
+For more detailed C# usage, see the [C# Implementation README](./csharp/README.md).
 
-You can enhance your workflow by:
+## Git Hook Integration
 
-1. Using the Visual Studio extension (conceptual, to be implemented)
-2. Setting up MSBuild integration to automatically update citations during build
-3. Using Git hooks to ensure citations are updated before commits
+This repository provides Git hooks for both Python and PowerShell to automatically update citations before each commit:
 
-### 5. MSBuild Integration
+- **Python Git Hook**: [citation-git-hook.py](./tools/citation-git-hook.py)
+- **PowerShell Git Hook**: [citation-git-hook.ps1](./tools/citation-git-hook.ps1)
 
-Add the following to your .csproj file:
+To install a Git hook:
 
-```xml
-<ItemGroup>
-  <PackageReference Include="CitationTracker" Version="1.0.0" />
-</ItemGroup>
+1. Copy the appropriate hook to your repository's `.git/hooks/pre-commit` file
+2. Make it executable (for Python hook on Unix systems)
 
-<PropertyGroup>  <UpdateCitations>true</UpdateCitations>
-</PropertyGroup>
-```
+## Comprehensive Documentation
 
-This will automatically update your CITATIONS.md file during build.
+For detailed usage instructions and best practices, refer to:
 
-## Getting Started
+- [AI Citation Guide](./AI_CITATION_GUIDE.md) - Complete documentation on citation practices
+- [Python Implementation Guide](./python/AI_CITATION_GUIDE.md) - Python-specific instructions
+- [C# Implementation Guide](./csharp/AI_CITATION_GUIDE.md) - C#-specific instructions
+- [Installation Guide](./INSTALL.md) - Detailed installation instructions
+## Example Files
 
-Based on your project type, follow the setup instructions in either:
-- [Python Implementation README](./python/README.md)
-- [C# Implementation README](./csharp/README.md)
+Check out the [shared/examples](./shared/examples/) directory for:
 
-## Basic Workflow
-
-1. When using Copilot to generate code, identify potential sources
-2. Add the source using the appropriate method:
-   - Python: `tracker.add_source()`
-   - C#: `tracker.AddSource()`
-3. Cite the source in your file
-4. Generate a consolidated CITATIONS.md document
+- Example citations JSON file
+- Example CITATIONS.md output
+- Sample implementation patterns
 
 ## IDE Integration
 
@@ -152,13 +150,20 @@ Both implementations provide concepts for IDE integration:
 - Visual Studio extension concept for C# projects
 - VS Code extension concept for any project type
 
-## Build & Git Integration
+## Build Integration for C# Projects
 
-- C# projects: MSBuild task for build-time citations update
-- Git hooks: Pre-commit hooks for automatic CITATIONS.md updates
+For C# projects, MSBuild integration allows automatic citation updates during build:
 
-## Conclusion
+```xml
+<ItemGroup>
+  <PackageReference Include="CitationTracker" Version="1.0.0" />
+</ItemGroup>
 
-By integrating these citation tracking practices into your workflow with GitHub Copilot, you ensure proper attribution for code sources, maintain licensing compliance, and create a transparent record of how AI assisted in your development process.
+<PropertyGroup>
+  <UpdateCitations>true</UpdateCitations>
+</PropertyGroup>
+```
 
-Remember that citation tracking is not just about legal compliance—it's about responsible use of AI and respect for the broader developer community whose work and knowledge have contributed to the AI's capabilities.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.

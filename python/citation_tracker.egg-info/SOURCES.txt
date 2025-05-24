@@ -1,0 +1,7 @@
+README.md
+setup.py
+citation_tracker.egg-info/PKG-INFO
+citation_tracker.egg-info/SOURCES.txt
+citation_tracker.egg-info/dependency_links.txt
+citation_tracker.egg-info/top_level.txt
+tests/test_citation_tracker.py

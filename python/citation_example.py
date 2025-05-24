@@ -5,7 +5,12 @@ when using GitHub Copilot agent mode.
 """
 import os
 import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Add the current directory to the path so we can import the citation_tracker module
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
 from citation_tracker import CitationTracker
 
 # Initialize the citation tracker for the project

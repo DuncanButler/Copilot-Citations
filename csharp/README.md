@@ -5,9 +5,9 @@ This folder contains the C# implementation of the Citation Tracker for AI-genera
 ## Components
 
 - `CitationTracker.cs`: Core class library that provides citation tracking functionality
-- `CitationExample.cs`: Example demonstrating how to use the citation tracker
+- `CitationExample/`: Console application demonstrating how to use the citation tracker
 - `VisualStudioExtensionConcept.cs`: Conceptual implementation of a Visual Studio extension
-- `CitationMSBuildTask.cs`: MSBuild task for integrating citation updates into the build process
+- `CitationMSBuild/`: MSBuild task for integrating citation updates into the build process
 
 ## Installation
 
