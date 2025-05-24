@@ -156,13 +156,15 @@ For C# projects, MSBuild integration allows automatic citation updates during bu
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="CitationTracker" Version="1.0.0" />
+  <PackageReference Include="CitationTracker" />
 </ItemGroup>
 
 <PropertyGroup>
   <UpdateCitations>true</UpdateCitations>
 </PropertyGroup>
 ```
+
+The package versions are managed centrally through the `Directory.Packages.props` file.
 
 ## License
 

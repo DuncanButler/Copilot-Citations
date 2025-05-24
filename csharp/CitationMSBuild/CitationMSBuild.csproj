@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>CitationMSBuild</AssemblyName>
+    <RootNamespace>CitationMSBuild</RootNamespace>
+    <DisableImplicitFrameworkReferences>false</DisableImplicitFrameworkReferences>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Framework" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" />
+    <ProjectReference Include="..\CitationTracker.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="UpdateCitationsTask.cs" />
+    <None Include="..\build\CitationMSBuild.targets" Pack="true" PackagePath="build" />
+  </ItemGroup>
+</Project>

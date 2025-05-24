@@ -1,15 +1,12 @@
-using System;
-using System.IO;
-using Microsoft.Build.Framework;
-using Microsoft.Build.Utilities;
 using CitationTracking;
+using Microsoft.Build.Framework;
 
 namespace CitationMSBuild
 {
     /// <summary>
     /// MSBuild task to update citations document during build process
     /// </summary>
-    public class UpdateCitationsTask : Task
+    public class UpdateCitationsTask : Microsoft.Build.Utilities.Task
     {
         /// <summary>
         /// The root directory of the project
