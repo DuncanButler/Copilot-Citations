@@ -4,10 +4,12 @@ This folder contains the C# implementation of the Citation Tracker for AI-genera
 
 ## Components
 
-- `CitationTracker.cs`: Core class library that provides citation tracking functionality
+- `CitationTracker/`: Core class library that provides citation tracking functionality
+  - Uses modern file-scoped namespaces for cleaner code organization (C# 10+ style)
 - `CitationExample/`: Console application demonstrating how to use the citation tracker
-- `VisualStudioExtensionConcept.cs`: Conceptual implementation of a Visual Studio extension
 - `CitationMSBuild/`: MSBuild task for integrating citation updates into the build process
+- `build/`: MSBuild targets file for automatic citations generation during build
+- `VisualStudioExtensionConcept.cs`: Conceptual implementation of a Visual Studio extension
 
 ## Installation
 
@@ -25,14 +27,36 @@ Or add it to your project file:
 </ItemGroup>
 ```
 
+If you're using central package versioning (recommended):
+
+```xml
+<!-- In Directory.Packages.props -->
+<ItemGroup>
+  <PackageVersion Include="CitationTracker" Version="1.0.0" />
+</ItemGroup>
+
+<!-- In your .csproj file -->
+<ItemGroup>
+  <PackageReference Include="CitationTracker" />
+</ItemGroup>
+```
+
+> **Note**: This project uses central package versioning with `Directory.Packages.props` to manage dependency versions consistently across projects.
+
 ## Basic Usage
 
 Initialize the tracker:
 ```csharp
 using CitationTracking;
 
+// With modern file-scoped namespace
+namespace YourNamespace;
+
+// Your code goes here
 var tracker = new CitationTracker();
 ```
+
+> **Note**: The project uses modern file-scoped namespaces (introduced in C# 10), which replace the traditional namespace blocks with a simpler syntax that applies to the entire file.
 
 Add a source:
 ```csharp
@@ -71,6 +95,20 @@ To automatically update citations during builds, add the following to your .cspr
   <UpdateCitations>true</UpdateCitations>
 </PropertyGroup>
 ```
+
+This will trigger the `UpdateCitationsTask` during build, which will automatically generate or update your `CITATIONS.md` file based on the citations stored in your project.
+
+### How MSBuild Integration Works
+
+1. The `CitationMSBuild.targets` file defines a task that runs after the build
+2. When enabled via the `UpdateCitations` property, it processes all citations
+3. It outputs a formatted markdown file with all citations in your project
+
+## Project Requirements
+
+- .NET 9.0
+- Central Package Management via Directory.Packages.props
+- Modern C# features including file-scoped namespaces
 
 ## Visual Studio Integration
 

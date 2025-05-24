@@ -1,0 +1,94 @@
+{
+  "project_info": {
+    "name": "CitationExample",
+    "created_at": "2025-05-25T00:06:22.110439+01:00"
+  },
+  "sources": {
+    "msft-graph-api": {
+      "name": "Microsoft Graph API",
+      "url": "https://docs.microsoft.com/en-us/graph/api/overview",
+      "author": "Microsoft Corporation",
+      "license_type": "MIT",
+      "description": "Microsoft Graph REST API documentation used for authentication flow implementation",
+      "added_at": "2025-05-25T00:12:32.56673+01:00"
+    },
+    "repository-pattern-ef": {
+      "name": "Repository Pattern with Entity Framework Core",
+      "url": "https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design",
+      "author": "Microsoft Documentation Team",
+      "license_type": "MIT",
+      "description": "Implementation pattern for data access layer using Repository pattern with EF Core",
+      "added_at": "2025-05-25T00:12:32.571623+01:00"
+    },
+    "stackoverflow-async-pattern": {
+      "name": "Stack Overflow: Best Practices for Async/Await in C#",
+      "url": "https://stackoverflow.com/questions/38017016/",
+      "author": "User: StephenCleary",
+      "license_type": "CC BY-SA 4.0",
+      "description": "Approach for handling asynchronous operations with proper exception handling",
+      "added_at": "2025-05-25T00:12:32.5721792+01:00"
+    }
+  },
+  "file_citations": {
+    "..\\..\\..\\..\\..\\..\\..\\project\\Services\\UserService.cs": [
+      {
+        "source_ids": [
+          "msft-graph-api"
+        ],
+        "cited_at": "2025-05-25T00:06:22.1421662+01:00",
+        "line_start": 45,
+        "line_end": 120,
+        "comment": "Authentication flow implementation based on Microsoft Graph API examples"
+      },
+      {
+        "source_ids": [
+          "msft-graph-api"
+        ],
+        "cited_at": "2025-05-25T00:12:32.5725844+01:00",
+        "line_start": 45,
+        "line_end": 120,
+        "comment": "Authentication flow implementation based on Microsoft Graph API examples"
+      }
+    ],
+    "..\\..\\..\\..\\..\\..\\..\\project\\Data\\UserRepository.cs": [
+      {
+        "source_ids": [
+          "repository-pattern-ef"
+        ],
+        "cited_at": "2025-05-25T00:06:22.1543218+01:00",
+        "line_start": 15,
+        "line_end": 85,
+        "comment": "Repository implementation based on Microsoft documentation"
+      },
+      {
+        "source_ids": [
+          "repository-pattern-ef"
+        ],
+        "cited_at": "2025-05-25T00:12:32.5730164+01:00",
+        "line_start": 15,
+        "line_end": 85,
+        "comment": "Repository implementation based on Microsoft documentation"
+      }
+    ],
+    "..\\..\\..\\..\\..\\..\\..\\project\\Helpers\\AsyncHelper.cs": [
+      {
+        "source_ids": [
+          "stackoverflow-async-pattern"
+        ],
+        "cited_at": "2025-05-25T00:06:22.1546725+01:00",
+        "line_start": 25,
+        "line_end": 50,
+        "comment": "Async execution pattern adapted from Stack Overflow answer"
+      },
+      {
+        "source_ids": [
+          "stackoverflow-async-pattern"
+        ],
+        "cited_at": "2025-05-25T00:12:32.5838075+01:00",
+        "line_start": 25,
+        "line_end": 50,
+        "comment": "Async execution pattern adapted from Stack Overflow answer"
+      }
+    ]
+  }
+}

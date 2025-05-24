@@ -82,16 +82,32 @@ For more detailed Python usage, see the [Python Implementation README](./python/
 Install-Package CitationTracker
 ```
 
+Or with central package versioning (recommended):
+
+```xml
+<!-- In Directory.Packages.props -->
+<ItemGroup>
+  <PackageVersion Include="CitationTracker" Version="1.0.0" />
+</ItemGroup>
+
+<!-- In your .csproj file -->
+<ItemGroup>
+  <PackageReference Include="CitationTracker" />
+</ItemGroup>
+```
+
 2. **Using the Citation Tracker**
 
 ```csharp
 using CitationTracking;
 
+// With modern file-scoped namespace (C# 10+)
+namespace YourNamespace;
+
 // Initialize tracker
 var tracker = new CitationTracker();
-```
 
-# Add a source
+// Add a source
 tracker.AddSource(
     sourceId: "example-source",
     name: "Example Library Documentation",
@@ -101,7 +117,7 @@ tracker.AddSource(
     description: "Pattern for handling example functionality"
 );
 
-# Cite in file
+// Cite in file
 tracker.CiteInFile(
     filePath: "MyFile.cs",
     sourceId: "example-source",
@@ -110,7 +126,7 @@ tracker.CiteInFile(
     comment: "Implementation based on example library documentation"
 );
 
-# Generate citations file
+// Generate citations file
 tracker.ExportCitationsMarkdown();
 ```
 

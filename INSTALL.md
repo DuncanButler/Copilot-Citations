@@ -44,8 +44,8 @@ tracker = CitationTracker()
 ## C# Implementation
 
 ### Requirements
-- .NET Standard 2.0 or higher compatible framework (.NET Core 3.1+, .NET 5+, etc.)
-- Visual Studio 2019 or higher (optional, for development)
+- .NET 9.0 or higher
+- Visual Studio 2022 or higher (optional, for development)
 
 ### Installation Options
 
@@ -60,7 +60,29 @@ tracker = CitationTracker()
 #### 2. Reference the Project
 Add a project reference to `CitationTracker.csproj` in your own solution.
 
-#### 3. NuGet Package (Future)
+#### 3. Using Central Package Versioning
+We recommend using central package versioning to manage dependencies:
+
+1. Create a `Directory.Packages.props` file in your solution root:
+   ```xml
+   <Project>
+     <PropertyGroup>
+       <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+     </PropertyGroup>
+     <ItemGroup>
+       <PackageVersion Include="CitationTracker" Version="1.0.0" />
+     </ItemGroup>
+   </Project>
+   ```
+
+2. Reference the package without version in your project file:
+   ```xml
+   <ItemGroup>
+     <PackageReference Include="CitationTracker" />
+   </ItemGroup>
+   ```
+
+#### 4. NuGet Package (Future)
 When published to NuGet:
 ```
 Install-Package CitationTracker
@@ -70,6 +92,9 @@ Install-Package CitationTracker
 
 ```csharp
 using CitationTracking;
+
+// With modern file-scoped namespace (C# 10+)
+namespace YourNamespace;
 
 // Initialize the tracker
 var tracker = new CitationTracker();
