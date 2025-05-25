@@ -90,12 +90,33 @@ Copilot-Citations/
 
 ## Future Work
 
-- Create proper CI/CD pipeline
-- Implement the VS Code extension fully
-- Implement the Visual Studio extension fully
-- Publish packages to NuGet and PyPI
-- Add more comprehensive tests for both implementations
-- Create demo applications showcasing the citation tracking workflow
+The following issues have been created to track future work:
+
+1. **Create proper CI/CD pipeline**
+   - Set up automated build, test, and release workflows
+   - Configure for both C# and Python implementations
+
+2. **Implement the VS Code extension fully**
+   - Complete the VS Code extension implementation
+   - Provide UI and commands for citation tracking
+
+3. **Implement the Visual Studio extension fully**
+   - Complete the Visual Studio extension implementation
+   - Integrate with the VS editor environment
+
+4. **Publish packages to NuGet and PyPI**
+   - Prepare and publish packages to official repositories
+   - Set up versioning and release process
+
+5. **Add more comprehensive tests for both implementations**
+   - Create test suites for both C# and Python
+   - Set up test coverage reporting
+
+6. **Create demo applications showcasing the citation tracking workflow**
+   - Develop example applications for both C# and Python
+   - Demonstrate real-world usage scenarios
+
+See the `github-issues` directory for detailed descriptions of these issues.
 
 ## Benefits Achieved
 
